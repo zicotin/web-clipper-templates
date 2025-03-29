@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Smashwords",
+	"behavior": "create",
+	"noteContentFormat": "{{description}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{meta:property:og:title}}",
+			"type": "text"
+		},
+		{
+			"name": "authors",
+			"value": "{{meta:property:Author}}",
+			"type": "multitext"
+		},
+		{
+			"name": "year",
+			"value": "{{meta:property:books:release_date|date:\\\"YYYY\\\"}}",
+			"type": "number"
+		},
+		{
+			"name": "cover",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "isbn",
+			"value": "{{meta:property:books:isbn}}",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{date}}",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, books, smashwords, schemaBook",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "bookFormat",
+			"value": "EBook",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.smashwords.com/books/view/"
+	],
+	"noteNameFormat": "{{meta:property:og:title|safe_name}} by {{meta:property:Author}}",
+	"path": "3 Ressurser/Ønskeliste"
+}

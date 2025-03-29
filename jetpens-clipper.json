@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Jetpens",
+	"behavior": "create",
+	"noteContentFormat": "# {{schema:@product:name}}\n\n![]({{image}})\n\n## Description\n\n{{selector:.description}}\n\n## Product Specifications\n\n{{selector:#product-specifications-container|markdown}}",
+	"properties": [
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{schema:@product:name}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{schema:@product:offers.price}} {{schema:@product:offers.priceCurrency}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, products,schemaProduct",
+			"type": "multitext"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@product:brand}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.jetpens.com/"
+	],
+	"noteNameFormat": "{{schema:@product:name}}",
+	"path": "3 Ressurser/Ønskeliste"
+}

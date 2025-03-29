@@ -1,0 +1,58 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Renderotica product",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:.pane:first-child}}",
+	"properties": [
+		{
+			"name": "aliases",
+			"value": "{{selector:h1.product-name}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "productID",
+			"value": "{{selector:#p_lt_zoneContent_pageplaceholder_p_lt_zoneContentBody_CGBytes_ProductDetail_lblSkuNumber}}",
+			"type": "text"
+		},
+		{
+			"name": "artists",
+			"value": "{{selector:a.vendor|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "originalPrice",
+			"value": "{{selector:h2.price|replace:\\\"FREE!\\\":\\\"$0.00\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "ds-asset",
+			"type": "multitext"
+		},
+		{
+			"name": "orderID",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "orderDate",
+			"value": "",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://www.renderotica.com/store/sku/"
+	],
+	"noteNameFormat": "{{selector:h1.product-name|safe_name}}",
+	"path": "4 Ressurser/Daz Assets/03 renderotica"
+}

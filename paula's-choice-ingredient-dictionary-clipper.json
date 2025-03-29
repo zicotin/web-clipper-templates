@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Paula's Choice Ingredient Dictionary",
+	"behavior": "create",
+	"noteContentFormat": "# {{selector:h1}}\n\n{{selector:.IngredientPagestyles__RowWrapper-sc-1bfeerm-6|list}} \n\n## {{selector:.IngredientPagestyles__AtAGlanceHeading-sc-1bfeerm-10}}\n\n{{selector:.IngredientPagestyles__KeyPoint-sc-1bfeerm-12|list}}\n\n## {{selector:.IngredientPagestyles__DescriptionTitle-sc-1bfeerm-13}}\n\n{{selectorHtml:.IngredientPagestyles__Description-sc-1bfeerm-14|strip_tags(\"p\")|markdown}}\n\n## Related\n\n{{selector:.IngredientPagestyles__Related-sc-1bfeerm-16 a|list}}\n\n# Products containing `=lower(this.aliases[0])`\n\n```dataview\nTABLE WITHOUT ID\n\nlink(file.link, default(title, file.name)) AS \"Produkt\",\nprice AS \"Pris\", \nsize AS \"Størrelse\", \ndefault(number(price), 1)/default(number(size), 1) AS \"Kr/enhet\",\nrating AS \"Vurdering\"\n\nFROM #hudpleie OR #skincare \n\nWHERE icontains(ingredients, this.aliases[0])\n```",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{selector:h1}}",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "aliases",
+			"value": "{{selector:h1|lower}}",
+			"type": "multitext"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, hudpleie, skincare",
+			"type": "multitext"
+		},
+		{
+			"name": "authors",
+			"value": "{{author}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url|split:\\\"?\\\"|first}}",
+			"type": "text"
+		},
+		{
+			"name": "keywords",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "{{selector:.ColoredIngredientRating__Rating-sc-8nrs1d-0|replace:\\\"Best\\\":\\\"⭐⭐⭐⭐⭐\\\",\\\"Good\\\":\\\"⭐⭐⭐⭐\\\",\\\"Average\\\":\\\"⭐⭐⭐\\\",\\\"Bad\\\":\\\"⭐⭐\\\",\\\"Worst\\\":\\\"⭐\\\"}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.paulaschoice.com/ingredient-dictionary/ingredient-"
+	],
+	"noteNameFormat": "{{selector:h1|safe_name}} in Skin Care",
+	"path": "3 Ressurser/Hudpleieressurser"
+}

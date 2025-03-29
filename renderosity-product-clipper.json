@@ -1,0 +1,68 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Renderosity product",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:#description|strip_tags:(br,strong,em)}}",
+	"properties": [
+		{
+			"name": "aliases",
+			"value": "{{selector:h1 .rr-mktproduct-title}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "productID",
+			"value": "{{url|split:\\\"/\\\"|slice:5,6}}",
+			"type": "text"
+		},
+		{
+			"name": "artists",
+			"value": "{{selector:h1 small.rr-mktproduct-byline a|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "originalPrice",
+			"value": "{{selector:.rr-mktproduct-baseprice|first|replace:(\\\" USD\\\":\\\"\\\")}}",
+			"type": "text"
+		},
+		{
+			"name": "purchasePrice",
+			"value": "{{selector:.d-lg-block .rr-mktproduct-price|replace:(\\\"Price\\: \\\":\\\"\\\", \\\" USD\\\":\\\"\\\")}}",
+			"type": "text"
+		},
+		{
+			"name": "releaseDate",
+			"value": "{{selector:.rr-date}}",
+			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "ds-asset",
+			"type": "multitext"
+		},
+		{
+			"name": "orderID",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "orderDate",
+			"value": "",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"https://www.renderosity.com/marketplace/products/"
+	],
+	"noteNameFormat": "{{selector:h1 .rr-mktproduct-title|safe_name}}",
+	"path": "4 Ressurser/Daz Assets/02 renderosity/renderosity products"
+}

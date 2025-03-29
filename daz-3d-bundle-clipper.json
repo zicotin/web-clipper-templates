@@ -1,0 +1,63 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Daz 3D bundle",
+	"behavior": "create",
+	"noteContentFormat": "{{highlights}}",
+	"properties": [
+		{
+			"name": "hasPart",
+			"value": "{{selector:#bundle_info a.product-image?title|wikilink}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "aliases",
+			"value": "{{meta:property:og:title}}",
+			"type": "multitext"
+		},
+		{
+			"name": "originalPrice",
+			"value": "{{selector:.base_price|first}}",
+			"type": "text"
+		},
+		{
+			"name": "purchasePrice",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "productID",
+			"value": "{{selector:.display_medium_up .sku_number}}",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "ds-asset/bundle",
+			"type": "multitext"
+		},
+		{
+			"name": "orderID",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "orderDate",
+			"value": "",
+			"type": "date"
+		}
+	],
+	"triggers": [
+		"^https\\:\\/\\/www\\.daz3d\\.com\\/.+-bundle$"
+	],
+	"noteNameFormat": "{{meta:property:og:title|safe_name}}",
+	"path": "4 Ressurser/Daz Assets/01 daz 3d/daz 3d bundles"
+}

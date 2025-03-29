@@ -1,0 +1,38 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Bluesky",
+	"behavior": "create",
+	"noteContentFormat": "{{content}}",
+	"properties": [
+		{
+			"name": "datePublished",
+			"value": "{{meta:name:article:published_time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "authors",
+			"value": "{{meta:property:og:title}}",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, bluesky",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://bsky.app/profile/"
+	],
+	"noteNameFormat": "{{meta:property:og:description|safe_name|slice:0,100}}",
+	"path": "0 Innboks"
+}

@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Blender Market",
+	"behavior": "create",
+	"noteContentFormat": "# {{schema:@Product:name}}\n\n![]({{image}})\n\n{{content}}",
+	"properties": [
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{schema:@Product:name}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{schema:@Product:offers.price}} {{schema:@Product:offers.priceCurrency}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, products, blender/addon, schemaProduct",
+			"type": "multitext"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://blendermarket.com/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "3 Ressurser/Ønskeliste"
+}

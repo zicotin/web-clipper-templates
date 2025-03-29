@@ -1,0 +1,68 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Goodreads",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:.BookPageMetadataSection__description}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{schema:name}}",
+			"type": "text"
+		},
+		{
+			"name": "authors",
+			"value": "{{schema:author[*].name|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "genre",
+			"value": "{{selector:.BookPageMetadataSection__genres .BookPageMetadataSection__genreButton|lower}}",
+			"type": "multitext"
+		},
+		{
+			"name": "numberOfPages",
+			"value": "{{schema:numberOfPages}}",
+			"type": "text"
+		},
+		{
+			"name": "year",
+			"value": "{{selector:p[data-testid='publicationInfo']|split:\\\"First published \\\"|slice:1|date:\\\"YYYY\\\"}}",
+			"type": "number"
+		},
+		{
+			"name": "cover",
+			"value": "{{schema:image}}",
+			"type": "text"
+		},
+		{
+			"name": "isbn",
+			"value": "{{schema:isbn}}",
+			"type": "text"
+		},
+		{
+			"name": "language",
+			"value": "{{schema:inLanguage}}",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{date}}",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, books, goodreads, schemaBook",
+			"type": "multitext"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.goodreads.com/book/"
+	],
+	"noteNameFormat": "{{schema:name}} by {{schema:author[*].name|join}}",
+	"path": "3 Ressurser/Ønskeliste"
+}
