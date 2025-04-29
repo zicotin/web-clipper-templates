@@ -26,7 +26,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings, products, blender, schemaProduct, addon",
+			"value": "clippings, products, blender, schemaProduct, {{selector:.product-meta a|last|lower}}",
 			"type": "multitext"
 		},
 		{
