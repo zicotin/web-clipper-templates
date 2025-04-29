@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Blender Market",
 	"behavior": "create",
-	"noteContentFormat": "# {{schema:@Product:name}}\n\n{{selector:.swiper-wrapper img?src|image|list}}\n\n{{selectorHtml:.product-info|markdown}}\n\n{{selectorHtml:#tab-content-main|markdown}}",
+	"noteContentFormat": "# {{schema:@Product:name}}\n\n{{selector:.swiper-wrapper img?src|image|list}}\n\n{{selectorHtml:.product-info|markdown}}\n\n{{selectorHtml:#tab-content-main|remove_html:(\"iframe\")|markdown}}",
 	"properties": [
 		{
 			"name": "dateCreated",
