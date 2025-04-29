@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Blender Market",
 	"behavior": "create",
-	"noteContentFormat": "# {{schema:@Product:name}}\n\n![]({{image}})\n\n{{content}}",
+	"noteContentFormat": "# {{schema:@Product:name}}\n\n{{selector:.swiper-wrapper img?src|image|list}}\n\n{{selectorHtml:.product-info|markdown}}\n\n{{selectorHtml:#tab-content-main|markdown}}",
 	"properties": [
 		{
 			"name": "dateCreated",
@@ -33,11 +33,17 @@
 			"name": "brand",
 			"value": "{{schema:@Product:brand.name}}",
 			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
 		}
 	],
 	"triggers": [
-		"https://blendermarket.com/"
+		"https://blendermarket.com/",
+		"https://superhivemarket.com/"
 	],
-	"noteNameFormat": "{{title}}",
-	"path": "3 Ressurser/Ønskeliste"
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "3 Ressurser/10 Personlig/12 Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}/{{title|safe_name}}"
 }
