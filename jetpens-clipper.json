@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Jetpens",
 	"behavior": "create",
-	"noteContentFormat": "# {{schema:@product:name}}\n\n![]({{image}})\n\n## Description\n\n{{selector:.description}}\n\n## Product Specifications\n\n{{selector:#product-specifications-container|markdown}}",
+	"noteContentFormat": "# {{schema:@product:name}}\n\n`=embed(this.image)`\n\n{{selector:.pswp-photo img?src|unique|image|list}}\n\n## Description\n\n{{selectorHtml:.description|markdown}}\n\n## Product Specifications\n\n{{selectorHtml:#product-specifications-container|markdown}}",
 	"properties": [
 		{
 			"name": "dateCreated",
@@ -26,18 +26,23 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings, products,schemaProduct",
+			"value": "clippings, products,schemaProduct,stationary",
 			"type": "multitext"
 		},
 		{
 			"name": "brand",
 			"value": "{{schema:@product:brand}}",
 			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{selector:.pswp-photo img?src|unique|first|split:\\\"/\\\"|last|split:\\\"?\\\"|first|wikilink}}",
+			"type": "text"
 		}
 	],
 	"triggers": [
 		"https://www.jetpens.com/"
 	],
-	"noteNameFormat": "{{schema:@product:name}}",
-	"path": "3 Ressurser/Ønskeliste"
+	"noteNameFormat": "{{schema:@product:name|safe_name}}",
+	"path": "3 Ressurser/10 Personlig/12 Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
 }
