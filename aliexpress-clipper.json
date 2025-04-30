@@ -1,0 +1,44 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "AliExpress",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:.pdp-info-left img?src|unique|image|list}}\n\n{{selectorHtml:#nav-description|remove_html:(\"iframe\")|markdown}}",
+	"properties": [
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{schema:@Product:offers.price}} {{schema:@Product:offers.priceCurrency}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, products,schemaProduct",
+			"type": "multitext"
+		},
+		{
+			"name": "image",
+			"value": "{{selector:.pdp-info-left img?src|unique|first|split:\\\"/\\\"|last|wikilink}}",
+			"type": "text"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.aliexpress.com/item/",
+		"https://aliexpress.com/item/"
+	],
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "3 Ressurser/10 Personlig/12 Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
+}
