@@ -56,8 +56,8 @@
 		}
 	],
 	"triggers": [
-		"^https\\:\\/\\/www\\.daz3d\\.com\\/.+-bundle$"
+		"/^https:\\/\\/www\\.daz3d\\.com\\/([^\\s]+)?-bundle$/"
 	],
 	"noteNameFormat": "{{meta:property:og:title|safe_name}}",
-	"path": "4 Ressurser/Daz Assets/01 daz 3d/daz 3d bundles"
+	"path": "4 Ressurser/70 Kunst/72 Daz Assets/03 Daz 3D/daz 3d bundles"
 }
