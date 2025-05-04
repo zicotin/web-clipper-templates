@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Daz 3D bundle",
 	"behavior": "create",
-	"noteContentFormat": "![{{selector:.display_medium_up .sku_number}}]({{selector:#main-image?src}})\n\n{{highlights}}\n",
+	"noteContentFormat": "{{selector:#main-image?src|image}}\n\n{{highlights}}\n",
 	"properties": [
 		{
 			"name": "hasPart",
