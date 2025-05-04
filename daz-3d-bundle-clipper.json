@@ -2,12 +2,17 @@
 	"schemaVersion": "0.1.0",
 	"name": "Daz 3D bundle",
 	"behavior": "create",
-	"noteContentFormat": "{{highlights}}",
+	"noteContentFormat": "![{{selector:.display_medium_up .sku_number}}]({{selector:#main-image?src}})\n\n{{highlights}}\n",
 	"properties": [
 		{
 			"name": "hasPart",
 			"value": "{{selector:#bundle_info a.product-image?title|wikilink}}",
 			"type": "multitext"
+		},
+		{
+			"name": "image",
+			"value": "{{selector:#main-image?src|split:\\\"/\\\"|last|split:\\\"?\\\"|first|wikilink}}",
+			"type": "text"
 		},
 		{
 			"name": "url",
