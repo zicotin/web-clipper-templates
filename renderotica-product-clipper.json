@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Renderotica product",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:.pane:first-child}}",
+	"noteContentFormat": "{{selectorHtml:.pane:first-child|markdown}}\n",
 	"properties": [
 		{
 			"name": "aliases",
@@ -48,6 +48,11 @@
 			"name": "orderDate",
 			"value": "",
 			"type": "date"
+		},
+		{
+			"name": "image",
+			"value": "",
+			"type": "text"
 		}
 	],
 	"triggers": [
