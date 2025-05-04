@@ -45,11 +45,6 @@
 			"type": "date"
 		},
 		{
-			"name": "fileClass",
-			"value": "ds-asset",
-			"type": "text"
-		},
-		{
 			"name": "orderID",
 			"value": "",
 			"type": "text"
@@ -58,6 +53,11 @@
 			"name": "orderDate",
 			"value": "",
 			"type": "date"
+		},
+		{
+			"name": "tags",
+			"value": "ds-asset",
+			"type": "multitext"
 		}
 	],
 	"triggers": [
