@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Daz 3D bundle",
 	"behavior": "create",
-	"noteContentFormat": "%%\n{{selector:#main-image?src|image}}\n%%\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}",
+	"noteContentFormat": "%%\n{{selector:#main-image?src|image}}\n%%\n\n## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}",
 	"properties": [
 		{
 			"name": "hasPart",
