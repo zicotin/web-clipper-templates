@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Daz 3D product",
 	"behavior": "create",
-	"noteContentFormat": "{{highlights}}",
+	"noteContentFormat": "## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}",
 	"properties": [
 		{
 			"name": "url",
