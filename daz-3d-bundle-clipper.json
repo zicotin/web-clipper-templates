@@ -6,7 +6,7 @@
 	"properties": [
 		{
 			"name": "hasPart",
-			"value": "{{selector:.data_for_whats_included ul li a|wikilink}}",
+			"value": "{{selector:#bundle_info a.product-image?title|wikilink}}",
 			"type": "multitext"
 		},
 		{
