@@ -20,7 +20,9 @@
 			"type": "multitext"
 		}
 	],
-	"triggers": [],
+	"triggers": [
+		"/^https:\\/\\/readeck\\..+\\..+\\/bookmarks\\/.*$/"
+	],
 	"noteNameFormat": "{{selector:h1|first|safe_name}}",
 	"path": "0 Innboks"
 }
