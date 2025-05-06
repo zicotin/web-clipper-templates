@@ -1,0 +1,26 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Readeck",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:rd-annotation|blockquote}}",
+	"properties": [
+		{
+			"name": "url",
+			"value": "{{selector:ul.mb-4 a?href|first}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{selector:h1|first}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "{{selector:ul[id^=bookmark-label-list-] a|kebab}}",
+			"type": "multitext"
+		}
+	],
+	"triggers": [],
+	"noteNameFormat": "{{selector:h1|first|safe_name}}",
+	"path": "0 Innboks"
+}
