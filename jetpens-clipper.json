@@ -44,5 +44,5 @@
 		"https://www.jetpens.com/"
 	],
 	"noteNameFormat": "{{schema:@product:name|safe_name}}",
-	"path": "3 Ressurser/10 Personlig/12 Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
 }
