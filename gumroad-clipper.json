@@ -1,0 +1,33 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Gumroad",
+	"behavior": "create",
+	"noteContentFormat": "{{selector:img.preview?src|image|list}}\n\n{{selectorHtml:.tiptap.ProseMirror|markdown}}",
+	"properties": [
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "originalPrice",
+			"value": "{{meta:property:product:price:amount}} {{meta:property:product:price:currency}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "schemaProduct",
+			"type": "multitext"
+		},
+		{
+			"name": "authors",
+			"value": "{{selector:a.user}}",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"/^https?:\\/\\/[^\\.]+\\.gumroad\\.com\\/l\\/.*$/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
