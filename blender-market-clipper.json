@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "title",
-			"value": "{{schema:@Product:name}}",
+			"value": "{{title}}",
 			"type": "text"
 		},
 		{
