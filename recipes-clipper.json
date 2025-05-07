@@ -1,0 +1,93 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Recipes",
+	"behavior": "create",
+	"noteContentFormat": "# {{title|split:\"|\"|first}}\n\n![]({{image}})\n\n{{description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:numbered}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
+	"properties": [
+		{
+			"name": "authors",
+			"value": "{{schema:author[*].name|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "title",
+			"value": "{{title|split:\\\"|\\\"|first}}",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
+		},
+		{
+			"name": "rating",
+			"value": "",
+			"type": "text"
+		},
+		{
+			"name": "recipeCuisine",
+			"value": "{{schema:recipeCuisine|join}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "publisher",
+			"value": "{{schema:publisher.name|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "tags",
+			"value": "recipes",
+			"type": "multitext"
+		},
+		{
+			"name": "recipeYield",
+			"value": "{{schema:recipeYield}}",
+			"type": "text"
+		},
+		{
+			"name": "recipeCategory",
+			"value": "{{schema:recipeCategory|join}}",
+			"type": "multitext"
+		},
+		{
+			"name": "prepTime",
+			"value": "{{schema:prepTime|replace:\\\"PT\\\",\\\"\\\",\\\"S\\\",\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "performTime",
+			"value": "{{schema:performTime|replace:\\\"PT\\\",\\\"\\\",\\\"S\\\",\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "totalTime",
+			"value": "{{schema:totalTime|replace:\\\"PT\\\",\\\"\\\",\\\"S\\\",\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "suitableForDiet",
+			"value": "{{schema:rsuitableForDiet}}",
+			"type": "text"
+		},
+		{
+			"name": "datePublished",
+			"value": "{{published}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"schema:@Recipe"
+	],
+	"noteNameFormat": "{{title|split:\"|\"|first|safe_name}}",
+	"path": "3 Ressurser/Matlaging - Oppskrifter - Recipes"
+}
