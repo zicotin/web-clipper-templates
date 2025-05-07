@@ -45,5 +45,5 @@
 		"https://superhivemarket.com/"
 	],
 	"noteNameFormat": "{{title|safe_name}}",
-	"path": "3 Ressurser/10 Personlig/12 Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}/{{title|safe_name}}"
+	"path": "3 Ressurser/Ønskeliste/{{domain}}/{{title|safe_name}}"
 }
