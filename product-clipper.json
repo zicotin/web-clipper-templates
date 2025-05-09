@@ -35,9 +35,7 @@
 			"type": "text"
 		}
 	],
-	"triggers": [
-		"schema:@Product"
-	],
+	"triggers": [],
 	"noteNameFormat": "{{title}}",
 	"path": "3 Ressurser/Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
 }
