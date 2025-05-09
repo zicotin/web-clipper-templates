@@ -28,6 +28,6 @@
 	"triggers": [
 		"/^https?:\\/\\/[^\\.]+\\.gumroad\\.com\\/l\\/.*$/"
 	],
-	"noteNameFormat": "{{title}}",
+	"noteNameFormat": "{{title|safe_name}}",
 	"path": "3 Ressurser/Ønskeliste/{{domain}}/{{title|safe_name}}"
 }
