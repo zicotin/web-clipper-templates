@@ -39,5 +39,5 @@
 		"schema:@Product"
 	],
 	"noteNameFormat": "{{title}}",
-	"path": "3 Ressurser/10 Personlig/12 Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
+	"path": "3 Ressurser/Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
 }

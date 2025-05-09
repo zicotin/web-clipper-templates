@@ -64,5 +64,5 @@
 		"https://www.goodreads.com/book/"
 	],
 	"noteNameFormat": "{{schema:name}} by {{schema:author[*].name|join}}",
-	"path": "3 Ressurser/Ønskeliste"
+	"path": "3 Ressurser/Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
 }

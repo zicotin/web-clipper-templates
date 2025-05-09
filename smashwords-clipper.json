@@ -54,5 +54,5 @@
 		"https://www.smashwords.com/books/view/"
 	],
 	"noteNameFormat": "{{meta:property:og:title|safe_name}} by {{meta:property:Author}}",
-	"path": "3 Ressurser/Ønskeliste"
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
 }

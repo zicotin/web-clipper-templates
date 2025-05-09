@@ -69,5 +69,5 @@
 		"/^https:\\/\\/www\\.daz3d\\.com\\/.+(?!\\/bundle\\/)$/"
 	],
 	"noteNameFormat": "{{meta:property:og:title|safe_name}}",
-	"path": "4 Ressurser/70 Kunst/72 Daz Assets/03 Daz 3D/daz 3d products"
+	"path": "4 Ressurser/Daz Studio Assets/Daz 3D/daz 3d products"
 }
