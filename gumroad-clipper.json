@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Gumroad",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:img.preview?src|image|list}}\n\n{{selectorHtml:.tiptap.ProseMirror|markdown}}",
+	"noteContentFormat": "# {{selector:header h1}}\n\n{{selector:img.preview?src|image|list}}\n\n{{selectorHtml:.tiptap.ProseMirror|markdown}}",
 	"properties": [
 		{
 			"name": "url",
