@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Product",
 	"behavior": "create",
-	"noteContentFormat": "# {{schema:@Product:name}}\n\n![]({{image}})\n\n{{contentHtml|markdown}}",
+	"noteContentFormat": "# {{schema:@Product:name}}\n\n{{image|image}}\n\n{{contentHtml|markdown}}",
 	"properties": [
 		{
 			"name": "dateCreated",
