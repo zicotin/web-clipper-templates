@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "schemaProduct",
+			"value": "product",
 			"type": "multitext"
 		},
 		{

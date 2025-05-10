@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings, products,schemaProduct",
+			"value": "product",
 			"type": "multitext"
 		},
 		{

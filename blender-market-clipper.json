@@ -26,7 +26,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings, schemaProduct, blender, {{selector:.product-meta a|last|lower|kebab}}",
+			"value": "product, blender, {{selector:.product-meta a|last|lower|kebab}}",
 			"type": "multitext"
 		},
 		{

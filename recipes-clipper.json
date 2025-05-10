@@ -46,7 +46,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "recipes",
+			"value": "recipe",
 			"type": "multitext"
 		},
 		{
