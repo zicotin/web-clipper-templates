@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "title",
-			"value": "{{title|split:\\\"|\\\"|first}}",
+			"value": "{{title|split:\\\"|\\\"|first|trim}}",
 			"type": "text"
 		},
 		{
