@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Recipes",
 	"behavior": "create",
-	"noteContentFormat": "# {{title|split:\"|\"|first}}\n\n![]({{image}})\n\n{{description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:numbered}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
+	"noteContentFormat": "# {{title|split:\"|\"|first}}\n\n{{image|image}}\n\n{{description}}\n\n## Ingredients\n\n{{schema:recipeIngredient|list}}\n\n## Instructions\n\n{{schema:recipeInstructions[*].text|list:numbered}}\n\n## Nutrition\n\n{{schema:@Recipe:nutrition|uncamel|capitalize|table|replace:(\"@type\":\"Nutrient\",\"Nutrition information\":\"Quantity\")}}",
 	"properties": [
 		{
 			"name": "authors",
@@ -82,6 +82,11 @@
 		{
 			"name": "datePublished",
 			"value": "{{published}}",
+			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image|split:\\\"/\\\"|last|split:\\\"?\\\"|first|wikilink}}",
 			"type": "text"
 		}
 	],
