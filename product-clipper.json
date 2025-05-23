@@ -38,6 +38,11 @@
 			"name": "currency",
 			"value": "{{schema:@Product:offers.priceCurrency}}",
 			"type": "text"
+		},
+		{
+			"name": "image",
+			"value": "{{image|split:\\\"/\\\"|last|split:\\\"?\\\"|first|wikilink}}",
+			"type": "text"
 		}
 	],
 	"triggers": [],
