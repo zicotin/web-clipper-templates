@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Renderosity product",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:#description|strip_tags:(br,strong,em)}}",
+	"noteContentFormat": "%% {{selector:.rr-mkt-product-image?src|first|image}} %%\n\n{{selector:#description|strip_tags:(br,strong,em)}}",
 	"properties": [
 		{
 			"name": "aliases",
@@ -58,6 +58,11 @@
 			"name": "orderDate",
 			"value": "",
 			"type": "date"
+		},
+		{
+			"name": "image",
+			"value": "{{selector:.rr-mkt-product-image?src|first|split:\\\"/\\\"|last|wikilink}}",
+			"type": "text"
 		}
 	],
 	"triggers": [
