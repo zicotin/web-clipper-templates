@@ -56,7 +56,7 @@
 		},
 		{
 			"name": "orderDate",
-			"value": "",
+			"value": "{{date}}",
 			"type": "date"
 		},
 		{
