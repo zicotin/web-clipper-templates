@@ -22,7 +22,7 @@
 		{
 			"name": "price",
 			"value": "{{schema:@Product:offers.price}}",
-			"type": "text"
+			"type": "number"
 		},
 		{
 			"name": "tags",
