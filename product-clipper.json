@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "price",
-			"value": "{{meta:property:product:price:amount}}",
+			"value": "{{schema:@Product:offers.price}}",
 			"type": "text"
 		},
 		{
@@ -32,6 +32,11 @@
 		{
 			"name": "brand",
 			"value": "{{schema:@product:brand}}",
+			"type": "text"
+		},
+		{
+			"name": "currency",
+			"value": "{{schema:@Product:offers.priceCurrency}}",
 			"type": "text"
 		}
 	],
