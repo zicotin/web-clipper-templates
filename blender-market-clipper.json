@@ -22,7 +22,7 @@
 		{
 			"name": "price",
 			"value": "{{schema:@Product:offers.price}} {{schema:@Product:offers.priceCurrency}}",
-			"type": "text"
+			"type": "number"
 		},
 		{
 			"name": "tags",
@@ -45,5 +45,5 @@
 		"https://superhivemarket.com/"
 	],
 	"noteNameFormat": "{{title|safe_name}}",
-	"path": "3 Ressurser/Ønskeliste/{{domain}}/{{title|safe_name}}"
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
 }
