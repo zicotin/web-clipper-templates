@@ -29,5 +29,5 @@
 		"/^https?:\\/\\/[^\\.]+\\.gumroad\\.com\\/l\\/.*$/"
 	],
 	"noteNameFormat": "{{title|safe_name}}",
-	"path": "3 Ressurser/Ønskeliste/{{domain}}/{{title|safe_name}}"
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
 }
