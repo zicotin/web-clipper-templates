@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Full wiki page",
 	"behavior": "create",
-	"noteContentFormat": "# {{title|strip_tags|strip_md}}\n\n{{contentHtml|remove_tags:\"a\"|markdown}}",
+	"noteContentFormat": "# {{title|strip_tags|strip_md}}\n\n{{contentHtml|remove_html:(\"sup,.reference, *[id^='cite_']\")|remove_tags:\"a\"|markdown}}",
 	"properties": [
 		{
 			"name": "title",
