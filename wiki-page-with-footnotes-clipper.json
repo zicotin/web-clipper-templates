@@ -1,8 +1,8 @@
 {
 	"schemaVersion": "0.1.0",
-	"name": "Full wiki page",
+	"name": "Wiki page with footnotes",
 	"behavior": "create",
-	"noteContentFormat": "# {{title|strip_tags|strip_md}}\n\n{{contentHtml|remove_html:(\"sup,.reference, *[id^='cite_']\")|remove_tags:\"a\"|markdown}}",
+	"noteContentFormat": "# {{title|strip_tags|strip_md}}\n\n{{contentHtml|remove_tags:\"a\"|markdown}}",
 	"properties": [
 		{
 			"name": "title",
@@ -31,7 +31,6 @@
 		}
 	],
 	"triggers": [
-		"https://whitewolf.fandom.com/wiki/",
 		"https://en.wikipedia.org/wiki/"
 	],
 	"noteNameFormat": "{{title|safe_name}}",
