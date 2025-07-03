@@ -1,0 +1,34 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Daz 3D Documentation Center",
+	"behavior": "create",
+	"noteContentFormat": "{{contentHtml|remove_html:(\"sup,.reference, *[id^='cite_']\")|remove_tags:\"a\"|markdown}}",
+	"properties": [
+		{
+			"name": "title",
+			"value": "{{title|replace:\\\" [Documentation Center]\\\":\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url|replace:/^https:\\/\\/web\\.archive\\.org\\/web\\/[0-9]+\\//:\\\"\\\"}}",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "tags",
+			"value": "clippings, daz-documentation, wiki",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"http://docs.daz3d.com/",
+		"/^https:\\/\\/web\\.archive\\.org\\/web\\/[0-9]+\\/(.*)$/"
+	],
+	"noteNameFormat": "{{title|replace:\" [Documentation Center]\":\"\"|safe_name}}",
+	"path": "0 Innboks"
+}
