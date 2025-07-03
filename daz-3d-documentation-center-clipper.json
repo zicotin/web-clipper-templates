@@ -30,5 +30,5 @@
 		"/^https:\\/\\/web\\.archive\\.org\\/web\\/[0-9]+\\/(.*)$/"
 	],
 	"noteNameFormat": "{{title|replace:\" [Documentation Center]\":\"\"|safe_name}}",
-	"path": "0 Innboks"
+	"path": "3 Ressurser/Daz 3D Documentation Center"
 }
