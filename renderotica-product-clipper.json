@@ -56,7 +56,7 @@
 		}
 	],
 	"triggers": [
-		"https://www.renderotica.com/store/sku/"
+		"https://www.renderotica.com/store/"
 	],
 	"noteNameFormat": "{{selector:h1.product-name|safe_name}}",
 	"path": "4 Ressurser/Daz Studio Assets/Renderotica/renderotica products"
