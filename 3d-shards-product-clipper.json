@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "3D Shards product",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:#tab-description|markdown}}",
+	"noteContentFormat": "{{selectorHtml:#tab-description|markdown}}",
 	"properties": [
 		{
 			"name": "aliases",
