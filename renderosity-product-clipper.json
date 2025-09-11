@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Renderosity product",
 	"behavior": "create",
-	"noteContentFormat": "%% {{selector:.rr-mkt-product-image?src|first|image}} %%\n\n{{selectorHtml:#description|strip_tags:(br,strong,em)|markdown}}",
+	"noteContentFormat": "{{selectorHtml:#description|strip_tags:(br,strong,em)|markdown}}",
 	"properties": [
 		{
 			"name": "aliases",
@@ -61,7 +61,7 @@
 		},
 		{
 			"name": "image",
-			"value": "{{selector:.rr-mkt-product-image?src|first|split:\\\"/\\\"|last|wikilink}}",
+			"value": "{{selector:.rr-mkt-product-image?src|first}}",
 			"type": "text"
 		}
 	],

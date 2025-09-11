@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Jetpens",
 	"behavior": "create",
-	"noteContentFormat": "# {{schema:@product:name}}\n\n- `=embed(default(this.image, link(this.file.name + \".webp\")))`\n{{selector:.lightbox-photo img?src|unique|image|list}}\n\n## Description\n\n{{selectorHtml:.description|markdown}}\n\n## Product Specifications\n\n{{selectorHtml:#product-specifications-container|remove_html:(\".display-sm-none\")|markdown}}",
+	"noteContentFormat": "# {{schema:@product:name}}\n\n{{selector:.lightbox-photo img?src|unique|image|list}}\n\n## Description\n\n{{selectorHtml:.description|markdown}}\n\n## Product Specifications\n\n{{selectorHtml:#product-specifications-container|remove_html:(\".display-sm-none\")|markdown}}",
 	"properties": [
 		{
 			"name": "dateCreated",
@@ -32,11 +32,6 @@
 		{
 			"name": "brand",
 			"value": "{{schema:@product:brand}}",
-			"type": "text"
-		},
-		{
-			"name": "image",
-			"value": "{{selector:.lightbox-photo img?src|unique|first|split:\\\"/\\\"|last|split:\\\"?\\\"|first|wikilink}}",
 			"type": "text"
 		}
 	],

@@ -78,11 +78,6 @@
 			"name": "datePublished",
 			"value": "{{published}}",
 			"type": "text"
-		},
-		{
-			"name": "image",
-			"value": "{{image|split:\\\"/\\\"|last|split:\\\"?\\\"|first|wikilink}}",
-			"type": "text"
 		}
 	],
 	"triggers": [

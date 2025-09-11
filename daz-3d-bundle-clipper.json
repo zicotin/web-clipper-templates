@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Daz 3D bundle",
 	"behavior": "create",
-	"noteContentFormat": "%%\n{{selector:#main-image?src|image}}\n%%\n\n## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}\n\n![[Contents of bundle.base]]",
+	"noteContentFormat": "## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}\n\n## Contents\n\n![[Contents of bundle.base]]",
 	"properties": [
 		{
 			"name": "hasPart",
@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "image",
-			"value": "{{selector:#main-image?src|split:\\\"/\\\"|last|split:\\\"?\\\"|first|wikilink}}",
+			"value": "{{selector:#main-image?src}}",
 			"type": "text"
 		},
 		{

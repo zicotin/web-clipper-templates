@@ -25,11 +25,6 @@
 			"type": "multitext"
 		},
 		{
-			"name": "image",
-			"value": "{{selector:.pdp-info-left img?src|unique|first|split:\\\"/\\\"|last|wikilink}}",
-			"type": "text"
-		},
-		{
 			"name": "brand",
 			"value": "{{schema:@Product:brand.name}}",
 			"type": "text"

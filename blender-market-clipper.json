@@ -22,7 +22,7 @@
 		{
 			"name": "price",
 			"value": "{{schema:@Product:offers.price}} {{schema:@Product:offers.priceCurrency}}",
-			"type": "number"
+			"type": "text"
 		},
 		{
 			"name": "tags",
@@ -33,11 +33,6 @@
 			"name": "artists",
 			"value": "{{selector:.product-meta a|first}}",
 			"type": "multitext"
-		},
-		{
-			"name": "image",
-			"value": "[[{{image|split:\\\"/\\\"|last}}]]",
-			"type": "text"
 		}
 	],
 	"triggers": [

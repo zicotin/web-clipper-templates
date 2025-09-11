@@ -58,6 +58,11 @@
 			"name": "tags",
 			"value": "ds-asset",
 			"type": "multitext"
+		},
+		{
+			"name": "image",
+			"value": "{{image}}",
+			"type": "text"
 		}
 	],
 	"triggers": [

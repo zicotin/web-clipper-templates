@@ -30,7 +30,7 @@
 			"type": "number"
 		},
 		{
-			"name": "cover",
+			"name": "image",
 			"value": "{{schema:image}}",
 			"type": "text"
 		},
@@ -64,5 +64,5 @@
 		"https://www.goodreads.com/book/"
 	],
 	"noteNameFormat": "{{schema:name}} by {{schema:author[*].name|join}}",
-	"path": "3 Ressurser/Ønskeliste/{{url|split:\"/\"|nth:3|join:\"\"}}"
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
 }
