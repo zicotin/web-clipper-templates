@@ -1,0 +1,38 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Snag",
+	"behavior": "create",
+	"noteContentFormat": "# {{selector:h1}}\n\n{{selector:.image-label-container img?src|unique|image|list|replace:(\"![](//\":\"![](https://\")|replace:(\"/\\?.*\\)/g\":\")\")}}\n\n{{selectorHtml:.product-block__description|markdown|replace:(\"/Share your Snags\\: .*/g\":\"\")}}",
+	"properties": [
+		{
+			"name": "brand",
+			"value": "Snag",
+			"type": "text"
+		},
+		{
+			"name": "size",
+			"value": "{{selector:variant-radios legend strong}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{schema:@ProductGroup:hasVariant[0].offers.price}} {{schema:@ProductGroup:hasVariant[0].offers.priceCurrency}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{selector:h1}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://snagtights.eu/"
+	],
+	"noteNameFormat": "{{selector:h1|safe_name}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
