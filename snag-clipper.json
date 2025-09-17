@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Snag",
 	"behavior": "create",
-	"noteContentFormat": "# {{selector:h1}}\n\n{{selector:.image-label-container img?src|unique|image|list|replace:(\"![](//\":\"![](https://\")|replace:(\"/\\?.*\\)/g\":\")\")}}\n\n{{selectorHtml:.product-block__description|markdown|replace:(\"/Share your Snags\\: .*/g\":\"\")}}",
+	"noteContentFormat": "# {{selector:h1}}\n\n{{selector:.image-label-container img?src|unique|slice:0,4|image|list|replace:(\"![](//\":\"![](https://\")|replace:(\"/\\?.*\\)/g\":\")\")}}\n\n{{selectorHtml:.product-block__description|markdown|replace:(\"/Share your Snags\\: .*/g\":\"\")}}",
 	"properties": [
 		{
 			"name": "brand",
