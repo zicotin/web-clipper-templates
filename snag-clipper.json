@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "size",
-			"value": "{{selector:variant-radios legend strong}}",
+			"value": "{{selector:variant-radios legend strong|join:\\\" \\\"}}",
 			"type": "text"
 		},
 		{
@@ -28,6 +28,11 @@
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "product, wardrobe",
+			"type": "multitext"
 		}
 	],
 	"triggers": [
