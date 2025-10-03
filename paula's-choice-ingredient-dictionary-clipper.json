@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Paula's Choice Ingredient Dictionary",
 	"behavior": "create",
-	"noteContentFormat": "# {{selector:h1}}\n\n{{selector:.IngredientPagestyles__RowWrapper-sc-1bfeerm-6|list}} \n\n## {{selector:.IngredientPagestyles__AtAGlanceHeading-sc-1bfeerm-10}}\n\n{{selector:.IngredientPagestyles__KeyPoint-sc-1bfeerm-12|list}}\n\n## {{selector:.IngredientPagestyles__DescriptionTitle-sc-1bfeerm-13}}\n\n{{selectorHtml:.IngredientPagestyles__Description-sc-1bfeerm-14|strip_tags(\"p\")|markdown}}\n\n## Related\n\n{{selector:.IngredientPagestyles__Related-sc-1bfeerm-16 a|list}}\n\n# Products containing `=lower(this.aliases[0])`\n\n![[Products containing ingredient.base]]",
+	"noteContentFormat": "# {{selector:h1}}\n\n{{selector:.IngredientPagestyles__RowWrapper-sc-1bfeerm-6|list}} \n\n## {{selector:.IngredientPagestyles__AtAGlanceHeading-sc-1bfeerm-10}}\n\n{{selector:.IngredientPagestyles__KeyPoint-sc-1bfeerm-12|list}}\n\n## {{selector:.IngredientPagestyles__DescriptionTitle-sc-1bfeerm-13}}\n\n{{selectorHtml:.IngredientPagestyles__Description-sc-1bfeerm-14|strip_tags(\"p\")|markdown}}\n\n## Related\n\n{{selector:.IngredientPagestyles__Related-sc-1bfeerm-16 a|list}}\n\n# Products containing `=lower(this.aliases[0])`\n\n![[Hudpleie - Skincare.base]]",
 	"properties": [
 		{
 			"name": "title",
