@@ -36,8 +36,8 @@
 		},
 		{
 			"name": "keywords",
-			"value": "",
-			"type": "text"
+			"value": "{{selector:.IngredientPagestyles__RowWrapper-sc-1bfeerm-6 a|lower}} ",
+			"type": "multitext"
 		},
 		{
 			"name": "rating",
