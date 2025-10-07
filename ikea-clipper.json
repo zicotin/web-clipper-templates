@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Ikea",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n{{selector:.pip-zoom-image img?src|image|list}}\n\n{{selectorHtml:.pip-product-summary__description|markdown}}\n\n## {{selector:.pip-technical-information h2|unique|first}}\n\n{{selectorHtml:p.pip-technical-information__product-description|unique|first|markdown}}\n\n{{selectorHtml:.pip-technical-information table|unique|first|markdown}}",
+	"properties": [
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "mpn",
+			"value": "{{schema:@Product:mpn}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{schema:@Product:offers.price}} {{schema:@Product:offers.priceCurrency}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "product",
+			"type": "multitext"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://www.ikea.com/"
+	],
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
