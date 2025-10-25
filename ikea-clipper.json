@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Ikea",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n\n{{selector:.pip-zoom-image img?src|image|list}}\n\n{{selectorHtml:.pip-product-summary__description|markdown}}\n\n## {{selector:.pip-technical-information h2|unique|first}}\n\n{{selectorHtml:p.pip-technical-information__product-description|unique|first|markdown}}\n\n{{selectorHtml:.pip-technical-information table|unique|first|markdown}}",
+	"noteContentFormat": "# {{title}}\n\n{{selector:.pip-zoom-image img?src|image|list}}\n\n{{selectorHtml:.pip-product-summary__description|markdown}}\n\n{{selectorHtml:.pip-technical-information h2|unique|markdown}}\n\n{{selectorHtml:p.pip-technical-information__product-description|unique|first|markdown}}\n\n{{selectorHtml:.pip-technical-information table|unique|first|markdown}}",
 	"properties": [
 		{
 			"name": "url",
