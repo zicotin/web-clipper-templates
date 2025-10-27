@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "size",
-			"value": "{{selector:variant-radios legend strong|join:\\\" \\\"}}",
+			"value": "{{selector:variant-selects legend strong|join:\\\" \\\"}}",
 			"type": "text"
 		},
 		{
