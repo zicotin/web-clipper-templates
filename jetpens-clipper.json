@@ -5,11 +5,6 @@
 	"noteContentFormat": "# {{schema:@product:name}}\n\n{{selector:.lightbox-photo img?src|unique|image|list}}\n\n## Description\n\n{{selectorHtml:.description|markdown}}\n\n## Product Specifications\n\n{{selectorHtml:#product-specifications-container|remove_html:(\".display-sm-none\")|markdown}}",
 	"properties": [
 		{
-			"name": "dateCreated",
-			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
-			"type": "datetime"
-		},
-		{
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
