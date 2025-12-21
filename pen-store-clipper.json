@@ -1,0 +1,38 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Pen Store",
+	"behavior": "create",
+	"noteContentFormat": "# {{schema:@product:name}}\n\n{{selectorHtml:.magic-thumb img?src|map|image|list}}\n\n{{selectorHtml:#Faktablad article|join:\"\\n\\n\"|markdown}}",
+	"properties": [
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{schema:@Product:name}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{schema:@Product:offers.price}}{{schema:@Product:offers[0].price}} {{schema:@Product:offers.priceCurrency}}{{schema:@Product:offers[0].priceCurrency}}",
+			"type": "text"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "product",
+			"type": "multitext"
+		}
+	],
+	"triggers": [
+		"https://penstore.no/"
+	],
+	"noteNameFormat": "{{schema:@Product:brand.name|safe_name}} {{schema:@Product:name|safe_name}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
