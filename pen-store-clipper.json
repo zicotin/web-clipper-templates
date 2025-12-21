@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Pen Store",
 	"behavior": "create",
-	"noteContentFormat": "# {{schema:@Product:name}}\n\n{{image|image|list}}\n{{selectorHtml:.magic-thumb img?src|image|list}}\n\n{{selectorHtml:#Faktablad article|join:\"\\n\\n\"|markdown}}",
+	"noteContentFormat": "# {{schema:@Product:brand.name}} {{schema:@Product:name|trim}}\n\n{{image|image|list}}\n{{selectorHtml:.magic-thumb img?src|image|list}}\n\n{{selectorHtml:#Faktablad article|join:\"\\n\\n\"|markdown}}",
 	"properties": [
 		{
 			"name": "url",
@@ -11,12 +11,12 @@
 		},
 		{
 			"name": "title",
-			"value": "{{schema:@Product:name}}",
+			"value": "{{schema:@Product:name|trim}}",
 			"type": "text"
 		},
 		{
 			"name": "price",
-			"value": "{{schema:@Product:offers.price}}{{schema:@Product:offers[0].price}} {{schema:@Product:offers.priceCurrency}}{{schema:@Product:offers[0].priceCurrency}}",
+			"value": "{{schema:@Product:offers|template:\\\"${price} ${priceCurrency},\\\"|split:\\\",\\\"|unique|first}}",
 			"type": "text"
 		},
 		{
