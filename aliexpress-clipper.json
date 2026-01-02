@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "AliExpress",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:.pdp-info-left img?src|unique|last|image|list}}\n\n{{selectorHtml:#nav-description|remove_html:(\"iframe\")|markdown}}",
+	"noteContentFormat": "{{selector:.pdp-info-left img?src|unique|last|image|list}}",
 	"properties": [
 		{
 			"name": "dateCreated",
