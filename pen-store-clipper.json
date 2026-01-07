@@ -28,6 +28,11 @@
 			"name": "tags",
 			"value": "product",
 			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "notebook-pen",
+			"type": "text"
 		}
 	],
 	"triggers": [
