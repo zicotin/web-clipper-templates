@@ -43,6 +43,11 @@
 			"name": "image",
 			"value": "{{image}}",
 			"type": "text"
+		},
+		{
+			"name": "icon",
+			"value": "bookmark",
+			"type": "text"
 		}
 	],
 	"triggers": [],

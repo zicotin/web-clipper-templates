@@ -28,6 +28,11 @@
 			"name": "brand",
 			"value": "{{schema:@Product:brand.name}}",
 			"type": "text"
+		},
+		{
+			"name": "icon",
+			"value": "shopping-basket",
+			"type": "text"
 		}
 	],
 	"triggers": [
