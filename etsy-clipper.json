@@ -1,0 +1,53 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Etsy",
+	"behavior": "create",
+	"noteContentFormat": "# {{schema:@Product:name}}\n\n{{selectorHtml:ul li img.carousel-image?src|image|list}}\n\n\n{{selectorHtml:#content-toggle-product-details-read-more|remove_tags:(\"button\")|replace_tags:\"br\":\"p\"|markdown|replace:\"/^\\\\- ?/gm\":\"- \"}}",
+	"properties": [
+		{
+			"name": "url",
+			"value": "{{url|split:\\\"?\\\"|first}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{schema:@Product:name}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{schema:@Product:offers.price}} {{schema:@Product:offers.priceCurrency}}",
+			"type": "text"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		},
+		{
+			"name": "shippingRate",
+			"value": "{{selector:#shipping-and-returns-div .currency-value}} {{selector:#shipping-and-returns-div .currency-symbol}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "product",
+			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "barcode",
+			"type": "text"
+		},
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		}
+	],
+	"triggers": [
+		"https://www.etsy.com/no-en/listing/"
+	],
+	"noteNameFormat": "{{title}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
