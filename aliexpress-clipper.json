@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "AliExpress",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:.pdp-info-left img?src|unique|image|list}}\n\n{{selectorHtml:#nav-description|remove_html:(\"iframe\")|markdown}}",
+	"noteContentFormat": "{{selector:.pdp-info-left img?src|replace:\"220x220\":\"960x960\"|unique|image|list:numbered}}\n\n{{selectionHtml|markdown}}",
 	"properties": [
 		{
 			"name": "dateCreated",
@@ -27,6 +27,11 @@
 		{
 			"name": "brand",
 			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		},
+		{
+			"name": "icon",
+			"value": "shopping-basket",
 			"type": "text"
 		}
 	],
