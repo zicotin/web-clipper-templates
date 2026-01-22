@@ -28,6 +28,11 @@
 			"name": "brand",
 			"value": "{{schema:@product:brand}}",
 			"type": "text"
+		},
+		{
+			"name": "icon",
+			"value": "notebook-pen",
+			"type": "text"
 		}
 	],
 	"triggers": [
