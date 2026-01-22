@@ -33,6 +33,11 @@
 			"name": "tags",
 			"value": "product, wardrobe",
 			"type": "multitext"
+		},
+		{
+			"name": "icon",
+			"value": "shirt",
+			"type": "text"
 		}
 	],
 	"triggers": [
