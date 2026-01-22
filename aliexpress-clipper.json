@@ -31,7 +31,7 @@
 		},
 		{
 			"name": "icon",
-			"value": "shopping-basket",
+			"value": "barcode",
 			"type": "text"
 		}
 	],
