@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "productID",
-			"value": "{{selector:.sku_wrapper span}}",
+			"value": "{{selector:.product-sku strong|first}}",
 			"type": "text"
 		},
 		{
@@ -31,12 +31,12 @@
 		},
 		{
 			"name": "originalPrice",
-			"value": "${{meta:property:product:price:amount}}",
+			"value": "{{meta:property:og:price:standard_amount}} {{meta:property:product:price:currency}}",
 			"type": "text"
 		},
 		{
 			"name": "purchasePrice",
-			"value": "$",
+			"value": "{{meta:property:product:price:amount}} {{meta:property:product:price:currency}}",
 			"type": "text"
 		},
 		{
@@ -51,7 +51,7 @@
 		},
 		{
 			"name": "orderDate",
-			"value": "",
+			"value": "{{time|date:\\\"YYYY-MM-DD\\\"}}",
 			"type": "date"
 		},
 		{
