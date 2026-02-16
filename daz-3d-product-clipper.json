@@ -2,17 +2,12 @@
 	"schemaVersion": "0.1.0",
 	"name": "Daz 3D product",
 	"behavior": "create",
-	"noteContentFormat": "## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}",
+	"noteContentFormat": "# {{meta:property:og:title}}\n\n## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}",
 	"properties": [
 		{
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
-		},
-		{
-			"name": "aliases",
-			"value": "{{meta:property:og:title}}",
-			"type": "multitext"
 		},
 		{
 			"name": "originalPrice",
