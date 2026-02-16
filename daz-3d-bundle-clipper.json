@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Daz 3D bundle",
 	"behavior": "create",
-	"noteContentFormat": "## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}\n\n## Contents\n\n![[Contents of bundle.base]]",
+	"noteContentFormat": "# {{meta:property:og:title}}\n\n## Description\n\n{{selectorHtml:.description .std|remove_tags:\"a\"|markdown}}\n\n## Contents\n\n![[Contents of bundle.base]]",
 	"properties": [
 		{
 			"name": "hasPart",
@@ -20,18 +20,8 @@
 			"type": "text"
 		},
 		{
-			"name": "aliases",
-			"value": "{{meta:property:og:title}}",
-			"type": "multitext"
-		},
-		{
 			"name": "originalPrice",
 			"value": "{{selector:.base_price|first}}",
-			"type": "text"
-		},
-		{
-			"name": "purchasePrice",
-			"value": "",
 			"type": "text"
 		},
 		{
@@ -55,9 +45,9 @@
 			"type": "text"
 		},
 		{
-			"name": "orderDate",
+			"name": "purchasePrice",
 			"value": "",
-			"type": "date"
+			"type": "text"
 		}
 	],
 	"triggers": [
