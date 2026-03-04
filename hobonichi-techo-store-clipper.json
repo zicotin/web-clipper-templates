@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Hobonichi Techo Store",
 	"behavior": "create",
-	"noteContentFormat": "{% if title %}\n# {{title|split:\" - \"|first}}\n{% endif %}\n\n{% set images = selector:#slide img?src %}\n{% for i in images %}  \n\t{% if loop.first %}## Images{% endif %}\n\t{% if i contains \"http\" %}{{i|image|list}}{% endif %}\n{% endfor %}\n\n{% set full_description = selectorHtml:section#about|remove_html:(\"iframe\")|markdown %}\n{% if full_description %}\n## Description\n{{full_description}}\n{% endif %}\n\n{% set specifications = selectorHtml:#spec table|markdown %}\n{% if specifications %}\n## Specifications\n{{specifications}}\n{% endif %}",
+	"noteContentFormat": "{% if title %}\n# {{title|split:\" - \"|first}}\n{% endif %}\n\n{% set images = selector:#slide img?src %}\n{% for i in images %}  \n\t{% if loop.first %}## Images{% endif %}\n\t{% if i contains \"http\" %}{{i|image|list}}{% endif %}\n{% endfor %}\n\n{% set full_description = selectorHtml:section#about|remove_html:(\"iframe\")|markdown %}\n{% if full_description %}\n## Description\n![[{{model}}]]\n{{full_description}}\n{% endif %}\n\n{% set specifications = selectorHtml:#spec table|markdown %}\n{% if specifications %}\n## Specifications\n{{specifications}}\n{% endif %}",
 	"properties": [
 		{
 			"name": "tags",
@@ -16,7 +16,7 @@
 		},
 		{
 			"name": "model",
-			"value": "{{selector:#item-name>small}}",
+			"value": "{% set model = selector:#item-name>small %}{{model}}",
 			"type": "text"
 		},
 		{
