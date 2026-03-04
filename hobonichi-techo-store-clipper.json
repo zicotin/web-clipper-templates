@@ -36,13 +36,13 @@
 		},
 		{
 			"name": "brand",
-			"value": "{{schema:@product:brand ?? Hobonichi}}",
+			"value": "Hobonichi",
 			"type": "text"
 		}
 	],
 	"triggers": [
 		"https://www.1101.com/store/techo/"
 	],
-	"noteNameFormat": "{{title|safe_name}}",
+	"noteNameFormat": "{{title|split:\" - \"|first|safe_name}}",
 	"path": "3 Ressurser/Ønskeliste/{{domain}}"
 }
