@@ -1,0 +1,43 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Tom's Studio",
+	"behavior": "create",
+	"noteContentFormat": "# {{title|split:\" - \"|first}} {{selector:.selector-wrapper fieldset legend[aria-label=\"Type\"] span[data-swapper-target]|split:\" \"|first}} {{selector:.selector-wrapper fieldset legend[aria-label=\"Colour\"] span[data-swapper-target]}}\n\n{{schema:@Product:image|image|list|unique}}\n\n## Description\n{{selectorHtml:#description-main|markdown}}",
+	"properties": [
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "product, stationery",
+			"type": "multitext"
+		},
+		{
+			"name": "price",
+			"value": "{{meta:property:og:price:amount}} NOK",
+			"type": "text"
+		},
+		{
+			"name": "description",
+			"value": "{{description}}",
+			"type": "text"
+		},
+		{
+			"name": "color",
+			"value": "{{selector:.selector-wrapper fieldset legend[aria-label=\\\"Colour\\\"] span[data-swapper-target]}}",
+			"type": "text"
+		},
+		{
+			"name": "model",
+			"value": "{{selector:.selector-wrapper fieldset legend[aria-label=\\\"Type\\\"] span[data-swapper-target]|split:\\\" \\\"|first}}",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://tomsstudio.com/en-no/products/"
+	],
+	"noteNameFormat": "{{title|split:\" - \"|first|safe_name}} {{selector:.selector-wrapper fieldset legend[aria-label=\"Type\"] span[data-swapper-target]|split:\" \"|first|safe_name}} {{selector:.selector-wrapper fieldset legend[aria-label=\"Colour\"] span[data-swapper-target]|safe_name}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
