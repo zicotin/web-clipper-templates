@@ -1,0 +1,48 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "Cult Pens",
+	"behavior": "create",
+	"noteContentFormat": "# {{title}}\n\n{% set images = selector:img.product-image?src|unique %}\n{{images|image|list|replace:\"![](//\":\"![](https://\"}}\n\n## Description\n{{selectorHtml:.product-description|markdown}}\n\n### Specifications\n{{selector:.additional_information .detail-container div|table:(\"\", \"\")}}",
+	"properties": [
+		{
+			"name": "dateCreated",
+			"value": "{{time|date:\\\"YYYY-MM-DDTHH:mm:ssZ\\\"}}",
+			"type": "datetime"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "title",
+			"value": "{{title}}",
+			"type": "text"
+		},
+		{
+			"name": "price",
+			"value": "{{meta:property:og:price:amount}} {{meta:property:og:price:currency}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "product, {{schema:@ProductGroup:category|lower|kebab}}",
+			"type": "multitext"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@ProductGroup:brand.name}}",
+			"type": "text"
+		},
+		{
+			"name": "icon",
+			"value": "barcode",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://cultpens.com/products/"
+	],
+	"noteNameFormat": "{{title|safe_name}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
