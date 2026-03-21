@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Snag",
 	"behavior": "create",
-	"noteContentFormat": "# {{selector:h1}}\n\n{% set images = selector:.image-label-container img?src %}\n{% for i in images %}\n{% if i contains \"SizeE\" or i contains \"SizeF\" or i contains \"SizeG\" %}\n{{i|image|list|replace:(\"![](//\":\"![](https://\")|replace:(\"/\\?.*\\)/g\":\")\")}}\n{% endif %}\n{% endfor %}\n\n{{selectorHtml:.product-block__description|markdown|replace:(\"/Share your Snags\\: .*/g\":\"\")}}",
+	"noteContentFormat": "# {{selector:h1}}\n\n{% set images = selector:.image-label-container img?src %}\n{% for i in images %}\n{% if i contains \"SizeE\" or i contains \"SizeF\" or i contains \"SizeG\" or i contains \"Size-E\" or i contains \"Size-F\" or i contains \"Size-G\" %}\n{{i|image|list|replace:(\"![](//\":\"![](https://\")|replace:(\"/\\?.*\\)/g\":\")\")}}\n{% endif %}\n{% endfor %}\n\n{{selectorHtml:.product-block__description|markdown|replace:(\"/Share your Snags\\: .*/g\":\"\")}}",
 	"properties": [
 		{
 			"name": "brand",
