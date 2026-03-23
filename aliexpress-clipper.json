@@ -21,7 +21,7 @@
 		},
 		{
 			"name": "tags",
-			"value": "product",
+			"value": "product{% if title contains \\\"stamps\\\" %}, stamp{% endif %}{% if title contains \\\"washi\\\" %}, washi{% endif %}{% if title contains \\\"stickers\\\" %}, sticker{% endif %}",
 			"type": "multitext"
 		},
 		{
