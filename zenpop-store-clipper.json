@@ -1,0 +1,38 @@
+{
+	"schemaVersion": "0.1.0",
+	"name": "ZenPop store",
+	"behavior": "create",
+	"noteContentFormat": "# {{schema:@Product:name}}\n\n{% set images = selector:#main-product img?src %}\n{% for i in images %}\n{% if i contains \"width=430\" %}\n{{i|trim|image|list|replace:(\"![](//\":\"![](https://\")}}\n{% endif %}\n{% endfor %}\n\n{{selectorHtml:#main-product footer.tabs-initialized > div|first|trim|remove_html:(\"a\")|markdown}}",
+	"properties": [
+		{
+			"name": "price",
+			"value": "{{schema:@Product:offers.price}} {{meta:property:og:price:currency}}",
+			"type": "text"
+		},
+		{
+			"name": "url",
+			"value": "{{url}}",
+			"type": "text"
+		},
+		{
+			"name": "tags",
+			"value": "product, stationery{% if title contains \\\"masking tape\\\" %}, washi{% endif%}",
+			"type": "multitext"
+		},
+		{
+			"name": "brand",
+			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		},
+		{
+			"name": "icon",
+			"value": "barcode",
+			"type": "text"
+		}
+	],
+	"triggers": [
+		"https://store.zenpop.jp/products/"
+	],
+	"noteNameFormat": "{{schema:@Product:name|safe_name}}",
+	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+}
