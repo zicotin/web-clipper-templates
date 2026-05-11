@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Wiki page without footnotes",
 	"behavior": "create",
-	"noteContentFormat": "# {{title|strip_tags|strip_md}}\n\n{{contentHtml|remove_html:(\"sup,.reference, *[id^='cite_']\")|remove_tags:\"a\"|markdown}}",
+	"noteContentFormat": "# {{title|strip_tags|strip_md}}\n\n{{contentHtml|remove_html:(\"sup, .portalbox, ol.references, #References, *[id^='cite_']\")|remove_tags:\"a\"|markdown}}",
 	"properties": [
 		{
 			"name": "title",
@@ -31,8 +31,10 @@
 		}
 	],
 	"triggers": [
-		"https://en.wikipedia.org/wiki/"
+		"https://en.wikipedia.org/wiki/",
+		"https://wiki.bme.com/",
+		"https://whitewolf.fandom.com/wiki/"
 	],
-	"noteNameFormat": "{{title|safe_name}}",
+	"noteNameFormat": "{{title|safe_name}} - {{site|safe_name}}",
 	"path": "0 Innboks"
 }
