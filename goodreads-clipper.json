@@ -2,11 +2,11 @@
 	"schemaVersion": "0.1.0",
 	"name": "Goodreads",
 	"behavior": "create",
-	"noteContentFormat": "{{selector:.BookPageMetadataSection__description}}",
+	"noteContentFormat": "{{selectorHtml:h1.Text__title1|markdown}}\n\n{{selectorHtml:.BookPageMetadataSection__description|markdown}}",
 	"properties": [
 		{
 			"name": "title",
-			"value": "{{schema:name}}",
+			"value": "{{selector:h1.Text__title1}}",
 			"type": "text"
 		},
 		{
@@ -51,18 +51,28 @@
 		},
 		{
 			"name": "tags",
-			"value": "clippings, books, goodreads, schemaBook",
+			"value": "clippings, books",
 			"type": "multitext"
 		},
 		{
 			"name": "url",
 			"value": "{{url}}",
 			"type": "text"
+		},
+		{
+			"name": "isPartOf",
+			"value": "{{selector:.BookPageTitleSection__title h3.Text__title3|split:\\\" #\\\"|first}}",
+			"type": "text"
+		},
+		{
+			"name": "position",
+			"value": "{{selector:.BookPageTitleSection__title h3.Text__title3|split:\\\" #\\\"|last}}",
+			"type": "text"
 		}
 	],
 	"triggers": [
 		"https://www.goodreads.com/book/"
 	],
-	"noteNameFormat": "{{schema:name}} by {{schema:author[*].name|join}}",
-	"path": "3 Ressurser/Ønskeliste/{{domain}}"
+	"noteNameFormat": "{{selector:h1.Text__title1|safe_name}} by {{schema:author[*].name|join|safe_name}}",
+	"path": "0 Innboks/{{domain}}"
 }
