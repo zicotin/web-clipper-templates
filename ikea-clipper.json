@@ -2,7 +2,7 @@
 	"schemaVersion": "0.1.0",
 	"name": "Ikea",
 	"behavior": "create",
-	"noteContentFormat": "# {{title}}\n\n{{selector:.pip-zoom-image img?src|image|list}}\n\n{{selectorHtml:.pip-product-summary__description|markdown}}\n\n{{selectorHtml:.pip-technical-information h2|unique|markdown}}\n\n{{selectorHtml:p.pip-technical-information__product-description|unique|first|markdown}}\n\n{{selectorHtml:.pip-technical-information table|unique|first|markdown}}",
+	"noteContentFormat": "# {{title}}\n\n{{schema:@Product:image|template:\"${contentUrl}\"|split:\\n\\n|image|list}}\n\n## Oversikt\n\n{{selectorHtml:.pipf-overview-summary__description|markdown}}\n\n## Produktdetaljer\n\n{{selectorHtml:.pipf-product-details-tab .pipf-product-details-modal__container|first|markdown}}\n\n## Dokumenter\n\n{{selector:a.pipf-product-details-modal__document-link?href|unique|image|list}}",
 	"properties": [
 		{
 			"name": "url",
@@ -15,7 +15,7 @@
 			"type": "text"
 		},
 		{
-			"name": "mpn",
+			"name": "productID",
 			"value": "{{schema:@Product:mpn}}",
 			"type": "text"
 		},
@@ -32,6 +32,26 @@
 		{
 			"name": "brand",
 			"value": "{{schema:@Product:brand.name}}",
+			"type": "text"
+		},
+		{
+			"name": "color",
+			"value": "{{schema:@Product:color}}",
+			"type": "text"
+		},
+		{
+			"name": "width",
+			"value": "{{schema:@Product:width}}",
+			"type": "text"
+		},
+		{
+			"name": "height",
+			"value": "{{schema:@Product:height}}",
+			"type": "text"
+		},
+		{
+			"name": "depth",
+			"value": "{{schema:@Product:depth}}",
 			"type": "text"
 		}
 	],
