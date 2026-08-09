@@ -36,18 +36,8 @@
 		},
 		{
 			"name": "tags",
-			"value": "ds-asset/bundle",
+			"value": "ds-asset-bundle",
 			"type": "multitext"
-		},
-		{
-			"name": "orderID",
-			"value": "",
-			"type": "text"
-		},
-		{
-			"name": "purchasePrice",
-			"value": "",
-			"type": "text"
 		}
 	],
 	"triggers": [
