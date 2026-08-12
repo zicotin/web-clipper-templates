@@ -6,12 +6,12 @@
 	"properties": [
 		{
 			"name": "url",
-			"value": "{{url}}",
+			"value": "{{url|split:\\\"#\\\"|first}}",
 			"type": "text"
 		},
 		{
 			"name": "originalPrice",
-			"value": "{{selector:.base_price|first}}",
+			"value": "{{selector:.normal_price|first}}",
 			"type": "text"
 		},
 		{
@@ -21,12 +21,12 @@
 		},
 		{
 			"name": "requiredProducts",
-			"value": "{{selector:.display_medium_up .compatible.required li a|wikilink}}",
+			"value": "{% set required = selector:.display_medium_up .compatible.required li a %}{% for item in required %}{% if item contains \\\"starter essentials\\\" %}{% else %}{{item|wikilink}}{% endif %}{% if !loop.last %},{% endif %}{% endfor %}",
 			"type": "multitext"
 		},
 		{
 			"name": "compatibleFigures",
-			"value": "{{selector:.display_medium_up .compatinfo .compatible.first ~ .compatible > .data}}",
+			"value": "{{selectorHtml:.display_medium_up .compatinfo .compatible.first ~ .compatible > .data|remove_html:(\\\"a\\\")|strip_tags|join:\\\",\\\"|trim}}",
 			"type": "multitext"
 		},
 		{
@@ -43,21 +43,6 @@
 			"name": "tags",
 			"value": "ds-asset",
 			"type": "multitext"
-		},
-		{
-			"name": "orderID",
-			"value": "",
-			"type": "text"
-		},
-		{
-			"name": "orderDate",
-			"value": "",
-			"type": "date"
-		},
-		{
-			"name": "purchasePrice",
-			"value": "",
-			"type": "text"
 		}
 	],
 	"triggers": [
