@@ -16,12 +16,12 @@
 		},
 		{
 			"name": "url",
-			"value": "{{url}}",
+			"value": "{{url|split:\\\"#\\\"|first}}",
 			"type": "text"
 		},
 		{
 			"name": "originalPrice",
-			"value": "{{selector:.base_price|first}}",
+			"value": "{{selector:.normal_price|first}}",
 			"type": "text"
 		},
 		{
