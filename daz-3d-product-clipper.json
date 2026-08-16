@@ -11,7 +11,7 @@
 		},
 		{
 			"name": "originalPrice",
-			"value": "{{selector:.normal_price|first}}",
+			"value": "{{schema:@Product:offers.price}} {{schema:@Product:offers.priceCurrency}}",
 			"type": "text"
 		},
 		{
